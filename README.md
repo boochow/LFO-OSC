@@ -7,3 +7,6 @@ Additionally, you can mix the LFO sound with the note sound using the **shift-sh
 
 
 The **form** parameter allows you to select the waveform type, with options including sine wave, triangular wave, parabolic wave, sawtooth wave, ramp down wave, and square wave.
+
+
+This software is compatible with the logue SDK v1.1 and tested on NTS-1.
