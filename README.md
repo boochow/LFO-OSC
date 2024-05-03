@@ -1,6 +1,9 @@
 # LFO-OSC
-This is an oscillator which frequency is 1/100 of the frequency corresponding to each note number.
+This oscillator produces a frequency that is 1/100th of the frequency corresponding to each MIDI note number.
 
-With the shape parameter, the scale can be changed from 1/100 to 1/1. Also you can mix the LFO sound and the note sound using the shif-shape parameter.
 
-The "Form" parameter selects the waveform from options of sine wave, triangular wave, parabolic wave, sawtooth wave, ramp down wave, and square wave.
+The **shape** parameter allows you to adjust the scale from 1/100th to a full 1/1 ratio.
+Additionally, you can mix the LFO sound with the note sound using the **shift-shape** parameter.
+
+
+The **form** parameter allows you to select the waveform type, with options including sine wave, triangular wave, parabolic wave, sawtooth wave, ramp down wave, and square wave.
