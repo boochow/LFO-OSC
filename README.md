@@ -8,5 +8,6 @@ Additionally, you can mix the LFO sound with the note sound using the **shift-sh
 
 The **form** parameter allows you to select the waveform type, with options including sine wave, triangular wave, parabolic wave, sawtooth wave, ramp down wave, and square wave.
 
+The **rtrgr** parameter enables the retrigger mode, which restarts the LFO with each note-on event. The default value(=1) is `off`.
 
 This software is compatible with the logue SDK v1.1 and tested on NTS-1.

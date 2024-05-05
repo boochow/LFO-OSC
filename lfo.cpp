@@ -7,6 +7,7 @@ typedef struct State {
     float shape;
     float shiftshape;
     uint8_t waveform;
+    uint8_t retrigger;
 } State;
 
 enum {
@@ -21,10 +22,6 @@ enum {
     SAWTOOTH,
     RAMPDOWN,
     SQUARE,
-};
-
-enum {
-    WAVEFORM = 2,
 };
 
 static State s_state;
@@ -98,7 +95,9 @@ void OSC_CYCLE(const user_osc_param_t * const params,
 
 void OSC_NOTEON(const user_osc_param_t * const params)
 {
-    s_state.flags |= k_flag_reset;
+    if (s_state.retrigger) {
+        s_state.flags |= k_flag_reset;
+    }
 }
 
 void OSC_NOTEOFF(const user_osc_param_t * const params)
@@ -117,6 +116,9 @@ void OSC_PARAM(uint16_t index, uint16_t value)
         break;
     case k_user_osc_param_id1:
         s_state.waveform = value;
+        break;
+    case k_user_osc_param_id2:
+        s_state.retrigger = value;
         break;
     default:
         break;
